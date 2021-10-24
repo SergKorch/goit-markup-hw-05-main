@@ -61,7 +61,14 @@
             <h1 class="section-hero-text">
               Эффективные решения <br />для вашего бизнеса
             </h1>
-            <button type="button" class="button-hero">Заказать услугу</button>
+            <button type="button" class="button-hero" data-modal-open>Заказать услугу</button>
+            <p></p>
+            <div class="modalka-bg is-hidden" data-modal>
+              <div class="modalka">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores non aut alias laborum fugiat minima, voluptates rerum nisi quasi unde perspiciatis dolor fuga? Qui ea, ducimus quaerat cupiditate soluta et.</p>
+                <button data-modal-close>Clozed</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -132,6 +139,7 @@
                   width="370"
                   alt="чем мы занимаемся"
                 />
+                <p class="second-background">Десктопные приложения</p>
               </li>
               <li class="item">
                 <img
@@ -139,6 +147,7 @@
                   width="370"
                   alt="чем мы занимаемся"
                 />
+                <p class="second-background">Мобильные приложения</p>
               </li>
               <li class="item">
                 <img
@@ -146,6 +155,7 @@
                   width="370"
                   alt="чем мы занимаемся"
                 />
+                <p class="second-background">Дизайнерские решения</p>
               </li>
             </ul>
           </div>
@@ -390,5 +400,6 @@
         </div>
       </div>
     </footer>
+    <script src="./modal.js"></script>
   </body>
 </html>
