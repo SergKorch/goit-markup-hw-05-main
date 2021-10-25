@@ -520,8 +520,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .portfolio-picture .item-flex:focus .card-bg,
-.portfolio-picture .item-flex:hover .card-bg
- {
+.portfolio-picture .item-flex:hover .card-bg {
   transform: translateY(0);
 }
 .item-flex-text {
