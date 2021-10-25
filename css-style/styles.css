@@ -11,7 +11,7 @@
   --command-background: #f5f4fa;
   --section-comand-portfolio-navig-text: #757575;
   --time-animation: 250ms;
-  --cibic-animation:cubic-bezier(0.4, 0, 0.2, 1);
+  --cibic-animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .visually-hidden {
   position: absolute;
@@ -144,7 +144,6 @@ body {
   transition-property: color;
   transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
-
 }
 .site-nav-group .site-nav::after {
   content: "";
@@ -152,18 +151,20 @@ body {
   display: block;
   width: 100%;
   height: 5px;
-  background-color:var(--link);
+  background-color: var(--link);
   bottom: 0;
   border-radius: 2px;
-transform: scalex(0);
+  transform: scalex(0);
   transition-property: transform;
-  transition-duration:  var(--time-animation);
-  transition-timing-function: var(--cibic-animation) ;
+  transition-duration: var(--time-animation);
+  transition-timing-function: var(--cibic-animation);
 }
-.site-nav-group .site-nav:hover::after , .site-nav-group .site-nav:focus::after{
+
+.site-nav-group .site-nav:focus::after,
+.site-nav-group .site-nav:hover::after,
+.site-nav-group .site-nav:active::after {
   display: block;
   transform: scalex(1);
-
 }
 
 .site-nav-group .item + .item {
@@ -182,7 +183,7 @@ transform: scalex(0);
   fill: currentColor;
   margin-right: 10px;
   transition-property: fill;
-  transition-duration:  var(--time-animation);
+  transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
 }
 .tell-icon {
@@ -249,7 +250,7 @@ transform: scalex(0);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition-property: color;
-  transition-duration:  var(--time-animation);
+  transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
 }
 
@@ -379,7 +380,7 @@ transform: scalex(0);
 .navig-footer-adress {
   line-height: 1.71;
   transition-property: color;
-  transition-duration:  var(--time-animation);
+  transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
 }
 .navig-footer {
@@ -407,7 +408,7 @@ transform: scalex(0);
   cursor: pointer;
   padding: 6px 22px 6px 22px;
   transition-property: background-color, box-shadow, color;
-  transition-duration:  var(--time-animation);
+  transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
 }
 
@@ -475,49 +476,54 @@ transform: scalex(0);
   text-align: left;
   padding-left: 15px;
   padding-right: 15px;
-  
 }
 .portfolio-picture .item-flex {
   position: relative;
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+
   display: block;
   border: 1px solid #eeeeee;
   transition-property: box-shadow;
-  transition-duration:  var(--time-animation);
-  transition-timing-function: var(--cibic-animation); 
-
+  transition-duration: var(--time-animation);
+  transition-timing-function: var(--cibic-animation);
 }
-.card-bg {
-  position: absolute;
-
-font-weight: 400;
-font-size: 18px;
-line-height: 1.56;
-color:var(--primary-background-color);
-  top: 0;
-  left: 0;
+.card-list {
+  display: block;
+  position: relative;
   width: 370px;
   height: 294px;
-  /* overflow: hidden; */
+  overflow: hidden;
+}
+.card-bg {
+  display: block;
+  position: absolute;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--primary-background-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 370px;
+  height: 294px;
   padding: 63px 24px 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition-property: transform;
-  transition-duration:  var(--time-animation);
+  transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
 }
-.test {
-  overflow: hidden;
-}
-.portfolio-picture .item-flex:hover,
-.portfolio-picture .item-flex:focus , .card-bg:hover, .card-bg:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: translateY(0);
-  
-}
 
+.portfolio-picture .item-flex:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.portfolio-picture .item-flex:focus .card-bg,
+.portfolio-picture .item-flex:hover .card-bg
+ {
+  transform: translateY(0);
+}
 .item-flex-text {
   display: block;
   padding-left: 24px;
@@ -583,13 +589,13 @@ color:var(--primary-background-color);
   justify-content: center;
   align-items: center;
   transition-property: background-color;
-  transition-duration:  var(--time-animation);
+  transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
 }
 .social-icon {
   fill: var(--section-comand-portfolio-navig-text);
   transition-property: fill;
-  transition-duration:  var(--time-animation);
+  transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
 }
 
@@ -626,7 +632,7 @@ color:var(--primary-background-color);
   border-radius: 4px;
   padding: 16px 32px 16px 32px;
   transition-property: border-color, fill;
-  transition-duration:  var(--time-animation);
+  transition-duration: var(--time-animation);
   transition-timing-function: var(--cibic-animation);
 }
 .company-icon {
@@ -713,6 +719,7 @@ color:var(--primary-background-color);
 }
 .modalka-bg {
   position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -741,4 +748,15 @@ color:var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+.icon-close {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-left: auto;
+  margin-bottom: auto;
 }
